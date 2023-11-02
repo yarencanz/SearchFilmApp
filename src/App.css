@@ -1,3 +1,6 @@
+body{
+    background-color: black;
+}
 .nav-container{
     display: flex;
     justify-content: space-between;
@@ -9,13 +12,15 @@
     margin-top: 5px;
     color: rgb(188, 185, 185);
     font-size: 20px;
-    margin-left: -800px;
+    margin-left: -750px;
 }
 .logo{
     height: 95px; 
     cursor: pointer;
 }
-.search-box{
+.search-container{
+    display: flex;
+    justify-content: space-between;
     border-radius: 10px;
     border: solid rgb(191, 180, 180) ;
     margin-right: 30px;
@@ -24,7 +29,17 @@
     border-left: none;
     height: 30px;
     padding-left: 10px;
+    padding-right: 10px;
     margin-top: 25px;
-    padding-right: 35px;
+}
+.search-box{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    caret-color: white;
+    color: white;
+}
+.Vector{
+    height: 20px;
 }
 

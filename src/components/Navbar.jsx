@@ -1,5 +1,6 @@
 import '../App.css'
 import CSEFLIX from '../assets/CSEFLIX-logo.svg'
+import Vector from '../assets/Vector.svg'
 
 function Navbar(){
     return(
@@ -11,14 +12,15 @@ function Navbar(){
             <h1>Popular</h1>
             <h1>Categories</h1>
            </div>
-           <input
+           <div className='search-container'>
+           <input 
            className='search-box'
             type="text"
             //value={searchText}
             //onChange={handleSearchChange}
-            placeholder="Search..."
-
-           />
+            placeholder="Search..." />
+           <img className='Vector' src={Vector}/>
+           </div>
       </nav>
     )
 }
