@@ -1,0 +1,13 @@
+
+.slider_title{
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.movie_container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: aliceblue;
+}
