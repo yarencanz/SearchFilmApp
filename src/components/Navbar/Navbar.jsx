@@ -1,8 +1,9 @@
 import { Link, json, useLocation } from 'react-router-dom';
 import './Navbar.css'
-import CSEFLIX from '../assets/CSEFLIX-logo.svg'
-import Vector from '../assets/Vector.svg'
+import CSEFLIX from '../../assets/CSEFLIX-logo.svg'
+import Vector from '../../assets/Vector.svg'
 import { useState } from 'react';
+import '../../pages/Popular/Popular.jsx'
 
 function Navbar(){
  const [searchText, setSearchText] = useState("");
@@ -20,6 +21,7 @@ function Navbar(){
   .then(response => response.json())
   .then(response => setSearchText(""))
  }
+
  
     return(
        <nav className='nav-container'>
@@ -27,7 +29,7 @@ function Navbar(){
             <img className='logo' src={CSEFLIX}/>
            </Link>
            <div className='titles'>
-            <Link to="/popular"  className={location.pathname === "/popular" ? "title-clicked" : "title-notClick"}  >Popular</Link>
+            <Link to="/popular"  className={location.pathname === "/popular" ? "title-clicked" : "title-notClick"} >Popular</Link>
             <Link to="/categories" className={location.pathname === "/categories" ? "title-clicked" : "title-notClick"} >Categories</Link>
            </div>
            <div className='search-container' >
