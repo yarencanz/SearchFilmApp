@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Popular.css"
 import "../../components/Navbar/Navbar.jsx"
+import Slider from "../../components/Slider/Slider.jsx";
 
 
 function Popular(){
@@ -23,23 +24,25 @@ function Popular(){
 
       },[])
       
-      const movieList = () => {
-        return movies.map(movie => <div key={movie?.id}> 
-        <div> 
-          <img src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}/>
-          </div>
-        {movie?.title}
-        </div>)
-      }
       
     return(
-      <div>
+      <div className="slider_container">
+
+      <div className="popular_movie">
       <div className="slider_title">
         Popular Movies
       </div>
-        <div className="movie_container">
-          {movieList()}
+        <div>
+          <Slider movies={movies}/>
         </div>
+        </div>
+
+        <div className="popular_TVseries">
+        <div className="slider_title">
+        Popular TV Series
+        </div>
+        </div>
+
         </div>
     )
 }
