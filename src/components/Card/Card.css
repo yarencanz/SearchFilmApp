@@ -1,0 +1,14 @@
+.card_container{
+ position: relative;
+ color: aliceblue;
+ 
+  
+}
+.images_container{
+ width: auto;
+ 
+    
+}
+.images{
+    height: 120px;
+}
