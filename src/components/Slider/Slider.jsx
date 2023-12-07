@@ -1,10 +1,13 @@
 import "./Slider.css";
-import Card from "../Card/Card.jsx";
+import MovieCard from "../Card/MovieCard.jsx";
+import TVseriesCard from "../Card/TVseriesCard.jsx";
 
-function Slider({movies}){
+function Slider(props){
     
    return(<div className="slider">
-      { movies.map(movie => <Card key={movie?.id} movie={movie}/>)}
+      {props.itemArray.map(props.type === true ? 
+      (movie => <MovieCard key={movie?.id} movie={movie}/>) : 
+      (series => <TVseriesCard key={series?.id} series={series}/>))}
         </div>
    )
    }
