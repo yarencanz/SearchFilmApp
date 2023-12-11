@@ -1,13 +1,12 @@
 import './Background.css'
 
-function Background() {
+function Background({ movies, movie }) {
     return (
         <div>
             <div
                 className="background_image"
                 style={{
-                    backgroundImage:
-                        'url(https://image.tmdb.org/t/p/original/1X7vow16X7CnCoexXh4H4F2yDJv.jpg)',
+                    backgroundImage: `url(https://image.tmdb.org/t/p/original/${movies[movie]?.backdrop_path})`,
                 }}
             >
                 <div
