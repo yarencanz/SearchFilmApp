@@ -1,0 +1,17 @@
+.background_image{
+    width: 100%;
+    height: 70%;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    background-size: cover;
+    flex-direction: column-reverse;
+}
+.transition{
+    width: 100%;
+    height: 50%;
+    z-index: -50;
+    background: 'linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 95%)'
+}
