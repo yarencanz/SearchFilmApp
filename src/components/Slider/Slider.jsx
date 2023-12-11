@@ -1,15 +1,21 @@
-import "./Slider.css";
-import MovieCard from "../Card/MovieCard.jsx";
-import TVseriesCard from "../Card/TVseriesCard.jsx";
+import MovieCard from '../Card/MovieCard'
+import TVseriesCard from '../Card/TVseriesCard'
+import './Slider.css'
 
-function Slider(props){
-    
-   return(<div className="slider">
-      {props.itemArray.map(props.type === true ? 
-      (movie => <MovieCard key={movie?.id} movie={movie}/>) : 
-      (series => <TVseriesCard key={series?.id} series={series}/>))}
+function Slider({ itemArray, type }) {
+    console.log('itemArray', itemArray)
+
+    return (
+        <div className="slider">
+            {itemArray.map((item) =>
+                type === true ? (
+                    <MovieCard key={item?.id} movie={item} />
+                ) : (
+                    <TVseriesCard key={item?.id} series={item} />
+                )
+            )}
         </div>
-   )
-   }
-   
-   export default Slider;
+    )
+}
+
+export default Slider

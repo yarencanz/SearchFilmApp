@@ -1,7 +1,9 @@
 .slider{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 20px;
+    overflow: auto;
     width: 100%;
+    
     
 }
