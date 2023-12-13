@@ -1,11 +1,6 @@
 .slider_container{
-    margin-top: 80px;
+    margin-top: 120px;
 }
-.slider_title{
-    color: aliceblue;
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-.popular_movie{
-    margin-bottom: 70px;
+.top_slider{
+    margin-bottom: 40px;
 }

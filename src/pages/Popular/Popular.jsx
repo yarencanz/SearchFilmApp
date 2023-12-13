@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './Popular.css'
 import '../../components/Navbar/Navbar.jsx'
 import Slider from '../../components/Slider/Slider.jsx'
+import '../../components/Slider/Slider.css'
 
 function Popular({ movies }) {
     const [TVseries, setTVseries] = useState([])
@@ -27,14 +28,14 @@ function Popular({ movies }) {
 
     return (
         <div className="slider_container">
-            <div className="popular_movie">
+            <div className="top_slider">
                 <div className="slider_title">Popular Movies</div>
                 <div>
                     <Slider itemArray={movies} type={true} />
                 </div>
             </div>
 
-            <div className="popular_TVseries">
+            <div>
                 <div className="slider_title">Popular TV Series</div>
                 <div>
                     <Slider itemArray={TVseries} />
