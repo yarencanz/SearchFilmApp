@@ -4,6 +4,9 @@
     gap: 20px;
     overflow: auto;
     width: 100%;
-    
-    
+}
+.slider_title {
+    color: aliceblue;
+    font-size: 25px;
+    margin-bottom: 15px;
 }
