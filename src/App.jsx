@@ -5,6 +5,7 @@ import Categories from './pages/Categories/Categories.jsx'
 import Popular from './pages/Popular/Popular.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import { useEffect, useState } from 'react'
+import MoviePage from './pages/MoviePage/MoviePage.jsx'
 
 function App() {
     const [movies, setMovies] = useState([])
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/" element={<Home movies={movies} />} />
                 <Route path="/popular" element={<Popular movies={movies} />} />
                 <Route path="/categories" element={<Categories />} />
+                <Route path="/moviePage" element={<MoviePage />} />
             </Routes>
         </div>
     )
