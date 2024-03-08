@@ -3,6 +3,5 @@
     justify-content: center;
     grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
-    grid-template-rows: auto auto;
-    
+    row-gap: 20px;
 }
