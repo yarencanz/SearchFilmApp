@@ -4,7 +4,7 @@ function CategoriesCard({ categoryName }) {
     console.log(categoryName)
     return (
         <div className="cardContainer">
-            <h1>{categoryName}</h1>
+            <div className="title">{categoryName}</div>
         </div>
     )
 }

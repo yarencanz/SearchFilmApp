@@ -1,8 +1,16 @@
 .cardContainer{
     border-style: solid;
     border-radius: 10px;
+    border: black;
     height: 200px;
     width: 390px;
     background-color: rgb(163, 47, 165);
-   
+    align-items: flex-end;
+    justify-content:center;
+    display: flex;
+}
+.title {
+    font-size: 50px;
+    color: rgb(1, 1, 1);
+    text-decoration: none !important;
 }

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import CategoriesCard from '../../components/Card/CategoriesCard'
 import './Categories.css'
+import { Link } from 'react-router-dom'
 
 function Categories() {
-    const [elements, setElements] = useState([])
+    const [categoriesList, setCategoriesList] = useState([])
 
     const options = {
         method: 'GET',
@@ -19,14 +20,20 @@ function Categories() {
             options
         )
             .then((response) => response.json())
-            .then((response) => setElements(() => response?.genres))
+            .then((response) => setCategoriesList(() => response?.genres))
             .catch((err) => console.error(err))
     }, [])
-    console.log(elements)
+
     return (
         <div className="categories">
-            {elements?.map((e, i) => (
-                <CategoriesCard key={`category${i}`} categoryName={e?.name} />
+            {categoriesList?.map((category, i) => (
+                <Link to={`/category/${category?.id}`}>
+                    {' '}
+                    <CategoriesCard
+                        key={`category${i}`}
+                        categoryName={category?.name}
+                    />{' '}
+                </Link>
             ))}
         </div>
     )
